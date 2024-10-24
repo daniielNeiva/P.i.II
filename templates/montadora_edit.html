@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Editar Montadora{% endblock %}
+{% block title_page %}Editar Montadora{% endblock %}
+{% block content %}
+  <form action="/montadora_update/{{ montadora.id }}" method="post">
+    <input type="text" name="nome" value="{{ montadora.nome }}" placeholder="Nome da Montadora..">
+    <input type="text" name="pais" value="{{ montadora.pais }}" placeholder="País...">
+    <input type="text" name="ano" value="{{ montadora.ano_fundacao }}" placeholder="Ano da Montadora">
+    <input type="submit" value="Atualizar Montadora" />
+  </form>
+{% endblock %}

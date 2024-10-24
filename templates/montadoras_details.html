@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Detalhes da Montadora{% endblock %}
+{% block title_page %}Detalhes da Montadora{% endblock %}
+{% block content %}
+  <h3>Nome: {{ montadora.nome }}</h3>
+  <p>País: {{ montadora.pais }}</p>
+  <p>Ano de Fundação: {{ montadora.ano_fundacao }}</p>
+  <button>
+    <a href="/montadora_edit/{{ montadora.id }}">Editar</a>
+  </button>
+  <form action="/montadora_delete/{{ montadora.id }}" method="post">
+    <input type="submit" value="Deletar Montadora" />
+  </form>
+{% endblock %}
